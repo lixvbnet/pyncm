@@ -1,11 +1,15 @@
-import setuptools, pyncm
+import setuptools
+
+__version__ = '0.0.0.0'
+with open("pyncm/version.py", "r", encoding="utf-8") as f:
+    exec(f.read())
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="pyncm",
-    version=pyncm.__version__,
+    version=__version__,
     author="greats3an",
     author_email="greats3an@gmail.com",
     description="NeteaseCloudMusic APIs for Python 3.x 适用于 Python 3 的网易云音乐 API",
